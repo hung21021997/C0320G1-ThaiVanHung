@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function passWord(str) {
+        let result = /^[0-9]{8}$/;
+        if(result.test(str)){
+            document.write(str + " password chính xác" + "<br>");
+        }else{
+            document.write(str + " password không chính xác" + "<br>");
+        }
+    }
+    passWord("12345678");
+    passWord("a1234567");
+    passWord("1234567");
+</script>
 </body>
 </html>

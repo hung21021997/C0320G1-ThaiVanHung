@@ -2,9 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+
+    class Apple {
+        constructor (weight){
+            this.weight = weight;
+        }
+        decrease(){
+            if(this.weight >0){
+                this.weight--;
+            }
+        }
+        isEmpty(apple){
+             alert("The apple's end");
+        }
+        getWeight(){
+            return this.weight;
+        }
+        checkApple() {
+            if(this.weight > 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            return this.gender;
+        }
+        getGender(gender) {
+            this.gender = gender;
+        }
+        eat(apple) {
+            if(apple.checkApple()){
+                this.weight++;
+                apple.decrease();
+            }
+        }
+        say() {
+            let say = "Do you want eat the apple ?";
+            alert(say);
+        }
+        answer(){
+            let answer = "Ok. Thanks";
+            alert(answer);
+        }
+        getName() {
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+            return this.name;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(weight) {
+            this.weight = weight;
+            return this.weight;
+        }
+    }
+    let apple = new Apple (10);
+    let adam = new Human("Adam","man",60);
+    let eva = new Human("Eva","woman",45);
+    adam.say();
+    eva.answer();
+    while (apple.checkApple()){
+        adam.eat(apple);
+        eva.eat(apple);
+    }
+    alert("Name: " + adam.name + "Weight: " + adam.weight);
+    alert("Name: " + eva.name + "Weight: " + eva.weight);
+
+
+</script>
 </body>
 </html>

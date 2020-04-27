@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
+<h2> TỪ ĐIỂN ANH-VIỆT :) </h2>
+<br>
+INPUT WORD SEARCH: <input type = "text" id = "english">
+<select id="pick">
+    <option> ENGLISH-VIETNAM </option>
+    <option> VIETNAM-ENGLISH </option>
+</select>
+<button type="button" onclick="search()">Search</button>
+<p id="result"></p>
 <body>
-$END$
+<script>
+let eng = [1,2,3];
+let pick = document.getElementById("pick");
+let english = document.getElementById("english");
+let vie = ['a','b','c'];
+function search() {
+    let result;
+    if (pick.value === "ENGLISH-VIETNAM"){
+        for ( let i=0; i < eng.length; i++){
+            if (english.value == eng[i]){
+                result = vie[i];
+                break;
+            } else {
+                result = "Không tìm thấy"
+            }
+        } } else {
+            for ( let j =0; j < vie.length; j++){
+                if(english.value === vie[j]){
+                    result = eng[j];
+                    break;
+                } else {
+                    result = "Không tìm thấy"
+                }
+            }
+    }
+document.getElementById("result").innerText = result;
+}
+</script>
 </body>
 </html>

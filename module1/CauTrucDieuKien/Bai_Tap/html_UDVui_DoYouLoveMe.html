@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
+<h1>DO_YOU_LOVE_ME_?</h1>
+<br>
+<button onclick="YES();">YES</button>
+<button style="position: absolute; left : 0; right:0" id= "NO" onmouseover="NO();">NO</button>
 <body>
-$END$
+<script>
+    function YES() {
+        alert ("hello");
+    }
+    function NO() {
+        var x = parseInt((Math.random() * window.innerWidth));
+        var y = parseInt((Math.random() * window.innerHeight));
+        document.getElementById('NO').style.left = x + 'px';
+        document.getElementById('NO').style.top = y + 'px';
+    }
+</script>
 </body>
 </html>

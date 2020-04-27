@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function numberMax(arr) {
+        let numbmax = arr[0];
+        for(let i=1; i<arr.length; i++){
+            if(numbmax < arr[i]){
+                numbmax = arr[i];
+            }
+        }
+        return numbmax;
+    }
+
+    function numberMin(arr) {
+        let numbmin = arr[0];
+        for(let i=1; i<arr.length; i++){
+            if(numbmin > arr[i]){
+                numbmin = arr[i];
+            }
+        }
+        return numbmin;
+    }
+    let array = [5,8,9,2,4,7];
+    document.write("giá trị lớn nhất trong mảng array: " + numberMax(array) + "<br>");
+    document.write("giá trị nhỏ nhất trong mảng array: " + numberMin(array));
+</script>
+</body>
+</html>

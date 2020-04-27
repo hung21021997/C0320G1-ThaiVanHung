@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function validateClass(str) {
+        let result = /^[CAP]{1}[0-9]{4}[GHIKLM]{1}$/;
+        if(result.test(str)){
+            document.write(str + " class hợp lệ" + "<br>");
+        }else{
+            document.write(str + " class không hợp lệ" + "<br>");
+        }
+    }
+    validateClass("C0318G");
+    validateClass("M0318G");
+    validateClass("P0323A");
+</script>
 </body>
 </html>

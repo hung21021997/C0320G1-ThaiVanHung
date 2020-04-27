@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a=1;
+    let b=1;
+    let c;
+    let count=0;
+    while (count<100){
+        c=a+b;
+        a=b;
+        b=c;
+       if(c % 5 ==0){
+           document.write(c);
+           break;
+       } else{
+           count++;
+       }
+    }
+</script>
 </body>
 </html>

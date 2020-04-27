@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumberPhone = ["0962651635","0316364493","0326545987","0765249853","0864231568","0235452687","0659824763"];
+    function validateNumberPhone(arr) {
+        let count = false;
+        let result1 = /^(([0][3][2-9])||([0][8][6])||([0][9][6-8]))[0-9]{7}$/;
+        // let result2 = /^[0][8][6][0-9]{7}$/;
+        // let result3 = /^[0][9][6-8][0-9]{7}$/;
+        for(let i =0; i<arr.length; i++){
+            if(result1.test(arr[i])){
+                document.write(arr[i] + " là số điện thoại thuộc nhà mạng viettel." + "<br>");
+                count = true;
+            }
+        }
+        if(!count){
+            document.write("trong mảng không có số điện thoại viettel");
+        }
+    }
+    validateNumberPhone(arrayNumberPhone);
+</script>
+</body>
+</html>

@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function validayEmail(str) {
+        let result = /^[A-Za-z0-9]+@[a-zA-Z0-9]+(\.[A-Za-z0-9]+)$/;
+        if(result.test(str)){
+            document.write(str + " email hợp lệ" + "<br>");
+        } else {
+            document.write(str + " email không hợp lệ" + "<br>");
+        }
+    }
+
+    let result1 = "a@gmail.com";
+    let result2 = "ab@yahoo.com";
+    let result3 = "abc@hotmail.com";
+    let result4 ="@gmail.com";
+    let result5 = "ab@gmail.";
+    let result6 = "#abc@gmail.com";
+    validayEmail(result1);
+    validayEmail(result2);
+    validayEmail(result3);
+    validayEmail(result4);
+    validayEmail(result5);
+    validayEmail(result6);
+</script>
 </body>
 </html>

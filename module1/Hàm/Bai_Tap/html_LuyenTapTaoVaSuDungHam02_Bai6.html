@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let number = parseInt(prompt("input number ="));
+    function kt(x) {
+        let count;
+        if(x>0){
+            count = true;
+        } else if(x<0){
+            count = false;
+        } else {
+            count = 0;
+        }
+        return count;
+    }
+    alert(kt(number));
+</script>
 </body>
 </html>

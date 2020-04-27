@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let str = prompt("input string");
+    let result = /^[aeiouAEIOU]$/;
+    let count =0;
+    for(let i=0; i<str.length; i++){
+        if(result.test(str.charAt(i))){
+            count++;
+        }
+    }
+    alert(count);
+</script>
 </body>
 </html>

@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Date {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        };
+    }
+    myDate = new Date ("2","3","2004");
+    alert("ngày bắt đầu: " + myDate.day +"/" + myDate.month + "/" + myDate.year);
+    myDate.day = "5";
+    alert("ngày thay đổi: " + myDate.day +"/" + myDate.month + "/" + myDate.year);
+</script>
 </body>
 </html>

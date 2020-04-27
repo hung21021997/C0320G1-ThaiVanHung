@@ -2,9 +2,205 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button onclick="name();">Name</button>
+<input type="text" id="1">
+<br>
+<button onclick = "CMND();">CMND</button>
+<input type = "text" id ="2">
+<br>
+<button onclick = "brithday();">Birthday</button>
+<input type = "text" id ="3">
+<br>
+<button onclick = "email();">Email</button>
+<input type = "text" id ="4">
+<br>
+<button onclick="address();">Address</button>
+<input type = "text" id ="5">
+<br>
+Customer: <select id="typeCustomer">
+    <option> Diamond </option>
+    <option> Platinum </option>
+    <option> Gold </option>
+    <option> Silver </option>
+    <option> Memner </option>
+</select>
+<br>
+<button onclick="discount();">Discount</button>
+<input type = "text" id = "6">
+<br>
+<button onclick="quantityIncluded();">QuantityIncluded</button>
+<input type = "text" id = "7">
+<br>
+<button onclick="rentDays();">RentDays</button>
+<input type = "text" id = "8">
+<br>
+Service: <select id="typeService">
+    <option> Villa </option>
+    <option> House </option>
+    <option> Room </option>
+</select>
+<br>
+TypeRoom: <select id="typeRoom">
+    <option> Vip </option>
+    <option> Business </option>
+    <option> Normal </option>
+</select>
+<br>
+<button onclick="Display();">Display</button>
+<script>
+    let choose = parseInt(prompt("1. Hiển thị thông tin khách hàng." + "\n" +
+        "2. Chỉnh sửa thông tin khách hàng." + "\n" +
+        "3. Hiển thị giá sau khi được giảm giá." + "\n"));
+    switch (choose) {
+        case 1: {
+            function Display() {
+                document.write("Name: " + document.getElementById("1").value + "<br>" +
+                    "Cmnd: " + document.getElementById("2").value + "<br>" +
+                    "BirthDay: " + document.getElementById("3").value + "<br>" +
+                    "Email: " + document.getElementById("4").value + "<br>" +
+                    "Address: " + document.getElementById("5").value + "<br>" +
+                    "TypeCustomer: " + document.getElementById("typeCustomer").value + "<br>" +
+                    "Discount: " + document.getElementById("6").value + "<br>" +
+                    "QuantityIncluded: " + document.getElementById("7").value + "<br>" +
+                    "RendDays: " + document.getElementById("8").value + "<br>" +
+                    "TypeService: " + document.getElementById("typeService").value + "<br>" +
+                    "TypeRoom: " + document.getElementById("typeRoom").value);
+            }
+            break;
+        }
+        case 2: {
+            let name = document.getElementById("1").value;
+            let cmnd = document.getElementById("2").value;
+            let brithday = document.getElementById("3").value;
+            let email = document.getElementById("4").value;
+            let address = document.getElementById("5").value;
+            let typeCustomer = document.getElementById("typeCustomer").value;
+            let discount = document.getElementById("6").value;
+            let quantityIncluded = document.getElementById("7").value;
+            let rendDays = document.getElementById("8").value;
+            let typeService = document.getElementById("typeService").value;
+            let typeRoom = document.getElementById("typeRoom").value;
+            let chooseEdit = parseInt(prompt("1. Tên: " + name + "\n" +
+                "2. Cmnd: " + cmnd + "\n" +
+                "3. Ngày sinh: " + brithday + "\n" +
+                "4. Email: " + email + "\n" +
+                "5. Địa chỉ: " + address + "\n" +
+                "6. Loại khách hàng: " + typeCustomer + "\n" +
+                "7. Giảm giá: " + discount + "\n" +
+                "8. Số lượng người: " + quantityIncluded + "\n" +
+                "9. Thời gian: " + rendDays + "\n" +
+                "10. Loại dịch vụ: " + typeService + "\n" +
+                "11. Loại phòng: " + typeRoom + "\n"));
+            switch (chooseEdit) {
+                case 1: {
+                    Name = prompt("Enter name: ");
+                    break;
+                }
+                case 2: {
+                    Cmnd = prompt("Enter cmnd: ");
+                    break;
+                }
+                case 3: {
+                    Brithday = prompt("Entar brithday: ");
+                    break;
+                }
+                case 4: {
+                    Email = prompt("Enter email: ");
+                    break;
+                }
+                case 5: {
+                    Address = prompt("Enter address: ");
+                    break;
+                }
+                case 6: {
+                    TypeCustomer = prompt("Enter typeCustomer: ");
+                    break;
+                }
+                case 7: {
+                    Discount = prompt("Enter discount: ");
+                    break;
+                }
+                case 8: {
+                    QuantityIncluded = prompt("Enter quantityInlided: ");
+                    break;
+                }
+                case 9: {
+                    RendDays = prompt("Enter rendDays: ");
+                    break;
+                }
+                case 10: {
+                    TypeService = prompt("Enter typeService: ");
+                    break;
+                }
+                case 11: {
+                    TypeRoom = prompt("Enter typeRoom: ");
+                    break;
+                }
+                default: {
+                    alert("Failed");
+                }
+
+            }
+            document.write("Tên: " + name + "\n" +
+                "Cmnd: " + cmnd + "\n" +
+                "Ngày sinh: " + brithday + "\n" +
+                "Email: " + email + "\n" +
+                "Địa chỉ: " + address + "\n" +
+                "Loại dịch vụ: " + typeService + "\n" +
+                "Loại phòng: " + typeRoom + "\n" +
+                "Loại khách hàng: " + typeCustomer + "\n" +
+                "Giảm giá: " + discount + "\n" +
+                "Số lượng người: " + quantityIncluded + "\n" +
+                "Thời gian: " + rendDays + "\n");
+            break;
+        }
+        case 3: {
+            let money;
+            if (document.getElementById("typeService").value === "Villa"){
+                money = 500;
+            } else if (document.getElementById("typeService").value === "House") {
+                money = 300;
+            } else if(document.getElementById("typeService").value === "Room") {
+                money = 100;
+            }
+            let temp =0;
+            if (document.getElementById("5").value === "Đà Nẵng"){
+                temp+=20;
+            } else if (document.getElementById("5").value === "Huế"){
+                temp+=10;
+            } else if (document.getElementById("5").value === "Quảng Nam"){
+                temp+=5;
+            }
+            if(document.getElementById("8").value > 7){
+                temp+=30;
+            } else if(document.getElementById("8").value > 5){
+                temp+=20;
+            } else if(document.getElementById("8").value > 2){
+                temp+=10;
+            }
+            if(document.getElementById("typeCustomer").value === "Diamond"){
+                temp+=15;
+            } else if(document.getElementById("typeCustomer").value === "Platium"){
+                temp+=10;
+            } else if(document.getElementById("typeCustomer").value === "Gold"){
+                temp+=5;
+            } else if(document.getElementById("typeCustomer").value === "Silver"){
+                temp+=2;
+            } else if(document.getElementById("typeCustomer").value === "Member"){
+                temp+=0;
+            }
+            document.write("TotalPay: " + (money*document.getElementById("8").value-temp));
+            break;
+        }
+        default: {
+            alert("Sự lựa chọn của bạn không có trong trình đơn");
+        }
+    }
+
+
+</script>
 </body>
 </html>

@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a=1;
+    let b=1;
+    let c;
+    let sum=2;
+    let count=0;
+    while (count < 18){
+        c=a+b;
+        a=b;
+        b=c;
+        sum = sum +c;
+        count++;
+    }
+    document.write(sum + " la tong 20 so dau tien trong day fibonacci");
+</script>
 </body>
 </html>

@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let numArray = ["t","o","i","l","a","d","u","a","n","g","o","c"];
+    function array(arr) {
+        let num = prompt("input num: ");
+        let count = 0;
+        for(let i=0; i<arr.length; i++){
+            if(num === arr[i]){
+                count++;
+            }
+        }
+        if(count == 0){
+            return -1;
+        } else {
+            return count;
+        }
+    }
+    alert(array(numArray));
+</script>
 </body>
 </html>

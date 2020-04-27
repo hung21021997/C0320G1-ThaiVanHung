@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let numb1 = parseInt(prompt("input number 1 ="));
+    let numb2 = parseInt(prompt("input number 2 ="));
+    let numb3 = parseInt(prompt("input number 3 ="));
+    function min(a,b,c) {
+        let min;
+        if(a<b){
+            min = a;
+            if(c<a){
+                min=c;
+            }
+        } else {
+            min = b;
+            if(c<b){
+                min=c;
+            }
+        }
+        return min;
+    }
+    alert("Giá trị nhỏ nhất: " + min(numb1,numb2,numb3));
+</script>
 </body>
 </html>

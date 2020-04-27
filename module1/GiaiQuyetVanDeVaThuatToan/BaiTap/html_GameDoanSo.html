@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array =[];
+    for(let i=0; i<=1000000; i++){
+        array.push(i);
+    }
+    function numberSearch1(arr,number) {
+        let index;
+        let check = false;
+        for(let i=0; i<arr.length; i++){
+            if(number == arr[i]){
+                index=i;
+                check = true;
+                break;
+            }
+        }
+        if(check){
+            document.write("đã tìm thấy number tại vị trí: " + index + "<br>");
+        } else {
+            document.write("không tìm thấy number" + "<br>");
+        }
+    }
+
+
+    function numberSearch2(arr,number) {
+        let index;
+        let check = false;
+        let min = 0;
+        let max = arr.length-1;
+        let mid;
+        while (min < max){
+            mid = (min + max)/2;
+            if(arr[mid] === number){
+                index = mid;
+                check = true;
+                break;
+            } else if(mid < number){
+                min = mid;
+            } else {
+                max = mid;
+            }
+        }
+        if(check){
+            document.write("đã tìm thấy number tại vị trí: " + index + "<br>");
+        } else {
+            document.write("không tìm thấy number" + "<br>");
+        }
+    }
+
+    let timeStart1 = new Date();
+    numberSearch1(array,8100);
+    let timeEnd1 = new Date();
+    let time1 = timeEnd1 - timeStart1;
+    document.write("thời gian thực hiện của tuyến tính: " + time1 + "<br>");
+
+    let timeStart2 = new Date();
+    numberSearch2(array,8100);
+    let timeEnd2 = new Date();
+    let time2 = timeEnd2 - timeStart2;
+    document.write("thời gian thực hiện của nhị phân: " + time2 + "<br>");
+
+</script>
+</body>
+</html>

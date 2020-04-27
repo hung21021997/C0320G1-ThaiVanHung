@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Circle {
+        constructor(radius, color) {
+            this.radius = parseFloat(radius);
+            this.color = color;
+        };
+        area (){
+            let area = this.radius*this.radius;
+            return area;
+        }
+    }
+    myCircle = new Circle(2," white");
+    alert("radius: " + myCircle.radius + " & " + "area: " + myCircle.area());
+</script>
 </body>
 </html>

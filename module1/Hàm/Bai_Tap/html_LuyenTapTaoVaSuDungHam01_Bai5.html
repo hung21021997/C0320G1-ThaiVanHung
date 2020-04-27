@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let stars = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let constellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    let star = prompt("input star : ");
+    let check=0;
+    let count;
+    function abc(def) {
+        for(let i = 0; i<stars.length; i++){
+            if(def === stars[i]){
+                count =constellation[i];
+                check++;
+            }
+        }
+        if(check == 1){
+            alert(count);
+        } else {
+            alert("Not Stars");
+        }
+    }
+    abc(star);
+</script>
 </body>
 </html>

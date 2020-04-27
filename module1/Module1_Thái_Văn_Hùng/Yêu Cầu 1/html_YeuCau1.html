@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let name = prompt("input name : ");
+    let cmnd = prompt("input cmnd : ");
+    let brithday = prompt("input birthday : ");
+    let email = prompt("input email : ");
+    let address = prompt("input address : ");
+    let typeService = prompt("input typrService : ");
+    let typeRoom = prompt("input typeRoom : ");
+    let typeCustomer= prompt("input typeCustomer : ");
+    let discount = prompt("input discount : ");
+    let quantityIncluded = prompt("input quatityIncluded : ");
+    let rendDays = prompt("input renDays : ");
+    let totalPay;
+    totalPay = 300*rendDays*(1-discount/100);
+    alert("name :" + name +
+        "cmnd :" + cmnd +
+        "brithday :" + brithday +
+        "email :" + email +
+        "address :" + address +
+        "typeService :" + typeService +
+        "typeRoom :" + typeRoom +
+        "typeCustomer :" + typeCustomer +
+        "discount :" + discount +
+        "quantityIncluded :" + quantityIncluded +
+        "rendDays :" + rendDays +
+        "totalPay :" + totalPay)
+
+</script>
 </body>
 </html>

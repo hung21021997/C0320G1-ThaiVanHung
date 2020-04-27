@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhso = parseFloat(prompt("input doanhso =",""));
+    let hoahong;
+    if (doanhso < 5000000) {
+        hoahong = doanhso*0.05;
+        alert(hoahong);
+    } else {
+        if (doanhso < 10000000) {
+            hoahong = doanhso*0.1;
+            alert(hoahong);
+        } else {
+            hoahong = doanhso *0.15;
+            alert(hoahong);
+        }
+    }
+</script>
+</body>
+</html>

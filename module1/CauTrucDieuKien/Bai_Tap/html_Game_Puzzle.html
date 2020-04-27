@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<img src="img/Hinh%201a.png" width="15%" onclick="chuyenHinh(1)" id="hinh1">
+<img src="img/Hinh%202b.png" width="15%" onclick="chuyenHinh(2)" id="hinh2">
+<img src="img/Hinh%201c.png" width="15%" onclick="chuyenHinh(3)" id="hinh3">
+<img src="img/Hinh%201d.png" width="15%" onclick="chuyenHinh(4)" id="hinh4">
+<img src="img/Hinh%201e.png" width="15%" onclick="chuyenHinh(5)" id="hinh5">
+<script>
+    let hinh1 = document.getElementById("hinh1");
+    let hinh2 = document.getElementById("hinh2");
+    let hinh3 = document.getElementById("hinh3");
+    let hinh4 = document.getElementById("hinh4");
+    let hinh5 = document.getElementById("hinh5");
+​
+    function chuyenHinh(number) {
+        switch (number) {
+            case 1:
+                if (hinh1.getAttribute("src") === "img/Hinh%201a.png") {
+                    hinh1.src = "img/Hinh%202a.png"
+                } else if (hinh1.getAttribute("src") === "img/Hinh%202a.png") {
+                    hinh1.src = "img/Hinh%203a.png";
+                } else if (hinh1.getAttribute("src") === "img/Hinh%203a.png") {
+                    hinh1.src = "img/Hinh%201a.png";
+                }
+                break;
+            case 2:
+                if (hinh2.getAttribute("src") === "img/Hinh%201b.png") {
+                    hinh2.src = "img/Hinh%202b.png"
+                } else if (hinh2.getAttribute("src") === "img/Hinh%202b.png") {
+                    hinh2.src = "img/Hinh%203b.png";
+                } else if (hinh2.getAttribute("src") === "img/Hinh%203b.png") {
+                    hinh2.src = "img/Hinh%201b.png";
+                }
+                break;
+        }
+        if(hinh1.getAttribute("src")==="img/Hinh%201a.png"&&hinh2.getAttribute("src")==="img/Hinh%201b.png")   {
+            hinh1.style.borderColor="red"
+        }       else if(hinh1.getAttribute("src")==="img/Hinh%202a.png"&&hinh2.getAttribute("src")==="img/Hinh%202b.png")  {
+        ​
+        }   else if(hinh1.getAttribute("src")==="img/Hinh%203a.png"&&hinh2.getAttribute("src")==="img/Hinh%203b.png")     {
+        ​
+        }
+    }
+</script>
 </body>
 </html>

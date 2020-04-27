@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let number = parseInt(prompt("input number = "));
+    function factor(a) {
+        let fac =1;
+        for(let i =1; i<= number; i++){
+            fac = fac*i;
+        }
+        return fac;
+    }
+    alert(factor(number));
+</script>
 </body>
 </html>

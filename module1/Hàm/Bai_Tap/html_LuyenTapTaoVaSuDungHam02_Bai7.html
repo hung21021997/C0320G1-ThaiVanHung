@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let numb1 = parseInt(prompt("input number 1 "));
+    let numb2 = parseInt(prompt("input number 2 "));
+    function convert(a,b) {
+        let text = a;
+        a = b;
+        b = text;
+        alert("Sau khi hoán đổi :" + "số thứ nhất : " + a + " số thứ hai : " + b);
+    }
+    convert(numb1,numb2);
+</script>
 </body>
 </html>

@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function valiDate(str) {
+        let result =/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+        if(result.test(str)){
+            document.write(str + " Date hợp lệ" + "<br>");
+        }else{
+            document.write(str + " Date không hợp lệ" + "<br>");
+        }
+    }
+    valiDate("23/04/2020");
+    valiDate("23/4/2020");
+    valiDate("23-04-2020");
+</script>
 </body>
 </html>

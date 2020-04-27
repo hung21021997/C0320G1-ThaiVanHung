@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let login = prompt ("input login =", "");
+    //let message;                                  SD vòng lặp if-else
+    //if (login == "Employee"){
+    //    message = "hello";
+    //} else if (login == "Director"){
+    //    message = "Greetings";
+    //} else if (login == ""){
+    //    message = "NO login";
+    //} else {
+    //    message = "";
+    //}
+    //alert (message);
+    let message = (login == "Employee")?"hello":   // SD Toán Tử
+        (login == "Director" )? "Greetings":
+            (login == "")? "NO login":
+                "";
+    alert (message);
+</script>
 </body>
 </html>

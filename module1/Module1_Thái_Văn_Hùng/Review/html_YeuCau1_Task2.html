@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="name();">Name</button>
+<input type="text" id="1">
+<br>
+<button onclick = "CMND();">CMND</button>
+<input type = "text" id ="2">
+<br>
+<button onclick = "brithday();">Birthday</button>
+<input type = "text" id ="3">
+<br>
+<button onclick = "email();">Email</button>
+<input type = "text" id ="4">
+<br>
+<button onclick="address();">Address</button>
+<input type = "text" id ="5">
+<br>
+Customer: <select id="typeCustomer">
+    <option> Diamond </option>
+    <option> Platinum </option>
+    <option> Gold </option>
+    <option> Silver </option>
+    <option> Memner </option>
+</select>
+<br>
+<button onclick="discount();">Discount</button>
+<input type = "text" id = "6">
+<br>
+<button onclick="quantityIncluded();">QuantityIncluded</button>
+<input type = "text" id = "7">
+<br>
+<button onclick="rentDays();">RentDays</button>
+<input type = "text" id = "8">
+<br>
+Service: <select id="typeService">
+    <option> Villa </option>
+    <option> House </option>
+    <option> Room </option>
+</select>
+<br>
+TypeRoom: <select id="typeRoom">
+    <option> Vip </option>
+    <option> Business </option>
+    <option> Normal </option>
+</select>
+<br>
+<button onclick="Display();">Display</button>
+<script>
+    function Display() {
+        let totalPay = 300*document.getElementById("8").value*(1-document.getElementById("6").value/100);
+        document.write("Name: " + document.getElementById("1").value + "<br>" +
+        "Cmnd: " + document.getElementById("2").value + "<br>" +
+        "BirthDay: " + document.getElementById("3").value + "<br>" +
+        "Email: " + document.getElementById("4").value + "<br>" +
+        "Address: " + document.getElementById("5").value + "<br>" +
+        "TypeCustomer: " + document.getElementById("typeCustomer").value + "<br>" +
+        "Discount: " + document.getElementById("6").value + "<br>" +
+        "QuantityIncluded: " + document.getElementById("7").value + "<br>" +
+        "RendDays: " + document.getElementById("8").value + "<br>" +
+        "TypeService: " + document.getElementById("typeService").value + "<br>" +
+        "TypeRoom: " + document.getElementById("typeRoom").value + "<br>" +
+         "Số tiền phải trả = " + totalPay
+        );
+    }
+</script>
+</body>
+</html>

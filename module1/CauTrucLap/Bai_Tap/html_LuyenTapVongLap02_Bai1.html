@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a=1;
+    let b=1;
+    let c;
+    let count = 0;
+    document.writeln(a);
+    document.writeln(b);
+    while (count < 30){
+        c=a+b;
+        a=b;
+        b=c;
+        document.writeln(c);
+        count++;
+    }
+</script>
 </body>
 </html>

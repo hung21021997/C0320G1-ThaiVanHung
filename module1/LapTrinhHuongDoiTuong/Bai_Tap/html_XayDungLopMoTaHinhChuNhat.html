@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<canvas id = "myCanvas" width = "200" height = "100"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = parseFloat(width);
+            this.height = parseFloat(height);
+        };
+        area(){
+           let area = this.width*this.height;
+           return area;
+        }
+        perimeter(){
+            let per = (this.width+this.height)*2;
+            return per;
+        }
+    }
+    myRectangle = new Rectangle(100,50);
+    alert("Diện tích: " + myRectangle.area() + " Chu vi: " + myRectangle.perimeter());
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.fillRect(20,20, 120, 70);
+</script>
 </body>
 </html>

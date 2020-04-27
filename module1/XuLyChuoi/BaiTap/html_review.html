@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let timePast = new Date(1997,1,16,12);
+    let timePresent = new Date();
+    let time = timePresent - timePast;
+    let timeSeconds = time/1000;
+    let timeMinutes = timeSeconds/60;
+    let timeHours = timeMinutes/60;
+    let timeDate = timeHours/24;
+    let timeMonth = timeDate/30;
+    let timeYear = timeMonth/12;
+    document.write("thời gian sinh ra: " + timePast +"<br>");
+    document.write("thời gian hiện tại: " + timePresent +"<br>");
+    document.write("thời gian sống theo năm: " + timeYear + "<br>");
+    document.write("thời gian sống theo tháng: " + timeMonth + "<br>");
+    document.write("thời gian sống theo ngày: " + timeDate + "<br>");
+    document.write("thời gian sống theo giờ: " + timeHours + "<br>");
+    document.write("thời gian sống theo phút: " + timeMinutes + "<br>");
+    document.write("thời gian sống theo giây: " + timeSeconds + "<br>");
+</script>
 </body>
 </html>

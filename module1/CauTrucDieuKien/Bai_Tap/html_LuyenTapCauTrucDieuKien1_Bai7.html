@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let minute =parseFloat(prompt("input minute = ",""));
+    let money;
+    if (minute < 50) {
+        money = 25000 + minute*600;
+        alert(money);
+    } else {
+        if (minute < 200) {
+            money = 25000 + 50*600 + (minute - 50)*400;
+            alert(money);
+        } else {
+            money = 25000 + 50*600 + 150*400 + (minute-200)*200;
+            alert(money);
+        }
+    }
+</script>
+</body>
+</html>

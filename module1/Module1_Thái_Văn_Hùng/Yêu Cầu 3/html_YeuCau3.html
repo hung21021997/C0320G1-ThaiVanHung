@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check = false;
+    let tempName="";
+    let name = prompt("input name : ");
+    name=name.trim().toLowerCase();
+    for(let i=0; i<name.length; i++){
+        if(name.charAt(i) ===" " && name.charAt(i+1) === " "){
+            continue;
+        }
+        if(i ===0 || name.charAt(i-1) === " "){
+            tempName+=tempName.charAt(i).toUpperCase();
+            continue;
+        }
+        tempName +=name.charAt(i);
+    }
+    name = tempName;
+    do {
+        let cmnd = prompt("input cmnd : ");
+        if(!isNaN(cmnd)){
+            cmnd=Number.parseFloat(cmnd);
+        }
+        if(!Number.isInteger(cmnd)){
+            alert("cmnd không đúng định dạng");
+            continue;
+        }
+        if(cmnd<10000000 || cmnd > 99999999){
+            alert("cmnd không đúng định dạng");
+            continue;
+        }
+        check = true;
+    } while (!check)
+    check = false;
+    do {
+        let brithday = prompt("input birthday : ");
+        if(brithday.charAt(2)==="/" && brithday.charAt(5)==="/"){
+            let day = brithday.substring(0,2);
+            let month = brithday.substring(3,5);
+            let year = brithday.substring(6,10);
+            if(!isNaN(day) && !isNaN(month) && !isNaN(year)){
+                day = Number.parseFloat(day);
+                month = Number.parseFloat(month);
+                year = Number.parseFloat(year);
+                if(Number.isInteger(day)&&Number.isInteger(month)&&Number.isInteger(year)){
+                    if(day<32&&month<13&&year>1950){
+                        check = true;
+                    }
+                }
+            }
+        }
+        if(!check){
+            alert("Ngày sinh không đúng định dạng");
+        }
+    } while (!check)
+    check = false;
+    do {
+        let coultAt = 0;
+        let coultDoc =0;
+        let email = prompt("input email : ");
+        for(let i =0; i<email.length; i++){
+            if(email.charAt(i) === "@"){
+                coultAt++;
+                for(let j=0; j<email.length; j++){
+                    if(email.charAt(j)==="."){
+                        coultDoc++;
+                    }
+                }
+            }
+        }
+        if(coultAt != 1 || coultDoc < 1){
+            alert("Định dạng email không đúng");
+        } else {
+            check = true;
+        }
+    } while (!check)
+check = false;
+    let address = prompt("input address : ");
+    let typeService = prompt("input typrService : ");
+    let typeRoom = prompt("input typeRoom : ");
+    let typeCustomer= prompt("input typeCustomer : ");
+    let discount = prompt("input discount : ");
+    do {
+        let quantityIncluded = prompt("input quatityIncluded : ");
+        if(!isNaN(quantityIncluded)){
+            quantityIncluded = Number.parseFloat(quantityIncluded);
+            if(Number.isInteger(quantityIncluded) && quantityIncluded>0){
+                check=true;
+            }
+        }
+        if(!check){
+            alert("quantityIncluded không phải số ngyên dương");
+        }
+    }while (!check)
+    check=false;
+
+    do {
+        let rendDays = prompt("input renDays : ");
+        if(!isNaN(rendDays)){
+            rendDays = Number.parseFloat(rendDays);
+            if(Number.isInteger(rendDays) && rendDays>0){
+                check=true;
+            }
+        }
+        if(!check){
+            alert("rendDays không phải là số nguyên");
+        }
+    } while (!check)
+    check=false;
+
+    let totalPay;
+    totalPay = 300*rendDays*(1-discount/100);
+    alert("name :" + name +
+        "cmnd :" + cmnd +
+        "brithday :" + brithday +
+        "email :" + email +
+        "address :" + address +
+        "typeService :" + typeService +
+        "typeRoom :" + typeRoom +
+        "typeCustomer :" + typeCustomer +
+        "discount :" + discount +
+        "quantityIncluded :" + quantityIncluded +
+        "rendDays :" + rendDays +
+        "totalPay :" + totalPay)
+
+</script>
+</body>
+</html>

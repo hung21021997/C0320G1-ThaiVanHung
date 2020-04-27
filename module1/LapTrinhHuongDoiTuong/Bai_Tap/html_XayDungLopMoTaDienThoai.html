@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Mobile {
+        constructor(pin,write,send,get,state) {
+            this.pin = pin;
+            this.write = write;
+            this.send = send;
+            this.get = get;
+            this.state =state;
+        };
+        isState(){
+            if(this.state){
+                alert("ĐT bật");
+            } else {
+                alert("ĐT tắt");
+            }
+        }
+        on_off(){
+            if(this.state) {
+                this.state = false;
+            } else {
+                this.state = true;
+            }
+        }
+        isCharge(){
+            this.pin = 100;
+        }
+        isWrite(){
+            this.write.push(prompt("input inbox: ")) ;
+        }
+        isGet(mobile){
+            this.get.push(Mobile.send);
+        }
+        isSend(mobile){
+            mobile.isGet(this)
+            this.send.push(this.write.pop());
+        }
+        seeGet(){
+            alert(this.get);
+        }
+        seeSend(){
+            alert(this.send);
+        }
+    }
+    let write= [];
+    let send = [];
+    let getting = [];
+    let myMobileNokia = new Mobile(90,write,send,getting,true);
+    let myMobileIphone = new Mobile(50,write,send,getting,true);
+    myMobileNokia.isWrite();
+    myMobileNokia.isSend(myMobileIphone)
+    myMobileIphone.seeSend();
+</script>
 </body>
 </html>

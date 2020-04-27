@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function footToMeters(foot) {
+        let meters = 0.305*foot;
+        return meters;
+    }
+    function metersToFoot(meters) {
+        let foot = 3.279*meters;
+        return foot;
+    }
+    let feet;
+    let meter;
+    for(let i=0; i<20; i++){
+        feet = i;
+        meter = footToMeters(feet);
+        document.write(feet + "=" + meter + "<br>");
+    }
+    for(let j=0; j<20; j++){
+        meter = j;
+        feet = metersToFoot(meter);
+        document.write(meter + "=" + feet + "<br>");
+    }
+</script>
 </body>
 </html>

@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a= parseFloat(prompt("input a=",""));
+    let b= parseFloat(prompt("input b=",""));
+    let x;
+    if (a==0) {
+        if (b==0) {
+            alert ("PT VSN");
+        } else {
+            alert("PT VN");
+        }
+    } else {
+        if(b==0) {
+            x=0;
+            alert(x);
+        } else {
+            x= -b/a;
+            alert(x);
+        }
+    }
+</script>
 </body>
 </html>
