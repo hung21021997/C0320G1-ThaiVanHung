@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [15,6,8,2,56,7,63,21,20];
+    arr.sort(function (a,b) {
+        return a-b;
+    });
+    alert(arr);
+    function searchMax(arr) {
+        let max = arr[0];
+        let check;
+        let check1;
+        for(let i=1; i < arr.length; i++){
+            if(arr[i]>max){
+                max= arr[i];
+                check1 = i;
+            }
+        }
+        arr[check1] = 0;
+        max=arr[0];
+        for(let i=1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                check = i;
+            }
+        }
+        alert("phần tử lớn thứ 2 trong mảng: " + max + "\n" + "vị trí phần tử đó: " + check);
+    }
+    searchMax(arr);
+</script>
+</body>
+</html>
