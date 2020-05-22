@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function displayNumber(arr,number) {
+        let count =0;
+        for (let i=0; i<arr.length; i++){
+            if(arr[i]>=number){
+                document.write("số nguyên lớn hơn number: " + arr[i] + " tại vị trí: " + i + "<br>");
+                count++;
+            }
+        }
+        document.write("Có " + count + " số nguyên lớn hơn number.")
+    }
+    let array = [5,12,9,6,45,21,3,9,14,8];
+    displayNumber(array,10);
+</script>
 </body>
 </html>

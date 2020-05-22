@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function validateAccount(str) {
+        let result = /^[0-9a-z_]{6,}$/;
+        if(result.test(str)){
+            document.write(str + " tài khoản hợp lệ" + "<br>");
+        } else {
+            document.write(str + " tài khoản không hợp lệ" + "<br>");
+        }
+    }
+    let result1 = "Hungantimater2102";
+    let result2 = "hung_antimater2102";
+    let result3 = "hung_Antimatter2102";
+    validateAccount(result1);
+    validateAccount(result2);
+    validateAccount(result3);
+</script>
 </body>
 </html>

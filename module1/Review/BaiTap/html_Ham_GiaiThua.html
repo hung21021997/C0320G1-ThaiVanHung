@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function factor() {
+        let number = parseFloat(prompt("Input number: "));
+        let fac =number;
+        for (let i=1; i<number;i++){
+            fac = fac*i;
+        }
+        alert("Giai thừa của number: " + fac);
+    }
+    factor();
+</script>
 </body>
 </html>

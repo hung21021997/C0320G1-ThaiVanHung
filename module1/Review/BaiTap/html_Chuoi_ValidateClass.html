@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function validateClass(str) {
+        let result = /^[ACP]{1}[0-9]{4}[GHIKLM]{1}$/;
+        if(result.test(str)){
+            document.write(str + " tên lớp hợp lệ"+ "<br>");
+        } else {
+            document.write(str + " tên lớp không hợp lệ" + "<br>");
+        }
+    }
+    let result1 = "B1234P";
+    let result2 = "P1234H";
+    let result3 = "PA123G";
+    validateClass(result1);
+    validateClass(result2);
+    validateClass(result3);
+</script>
 </body>
 </html>

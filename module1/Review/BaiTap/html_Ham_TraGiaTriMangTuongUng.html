@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let ngoiSao = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let chomSao = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function ngoiChomSao(arr1,arr2) {
+        let word = prompt("input: ");
+        let count =0;
+        let check;
+        for (let i=0; i<arr1.length; i++){
+            if(arr1[i] === word){
+                count++;
+                check = i;
+            }
+        }
+        if(count === 0){
+            alert("không có chòm sao tương ứng");
+        } else {
+            alert("Chòm sao tương ứng: " + arr2[check]);
+        }
+    }
+    ngoiChomSao(ngoiSao,chomSao);
+</script>
 </body>
 </html>

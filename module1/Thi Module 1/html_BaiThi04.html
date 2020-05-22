@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class NhanVien {
+        constructor(ten,ngaylamviec,luongnv) {
+            this.ten = ten;
+            this.ngaylamviec = ngaylamviec;
+            this.luongnv = luongnv;
+        }
+        getTen(){
+            return this.ten;
+        }
+        getNgaylamviec(){
+            return this.ngaylamviec;
+        }
+        getLuongnv(){
+            return this.luong;
+        }
+        setTen(){
+            this.ten = ten;
+        }
+        setNgaylamviec(){
+            this.ngaylamviec = ngaylamviec;
+        }
+        setLuongnv(){
+            this.luongnv = luongnv;
+        }
+    }
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Hiển thị danh sách công nhân." + "\n2. Thêm mới."));
+        switch (choose) {
+            case 1: {
+                displayInformation();
+            }
+            case 2: {
+                addEmployee();
+            }
+        }
+    }
+    function addEmployee() {
+        let employee = new NhanVien();
+        employee.setTen(prompt("Enter Họ và Tên:"));
+        let luong = new NhanVien();
+        luong.setLuongnv = this.ngaylamviec*200;
+        arr.push(employee);
+        arr.push(luong);
+        alert("Bạn đã thêm thành công");
+        displayMainMenu();
+    }
+    function displayInformation() {
+        let sout;
+        sout += "<table>";
+        sout += "<tr>";
+        sout += "<th>Họ và tên</th>";
+        sout += "<tr>";
+        for (let i = 0; i < arr.length; i++) {
+            sout += "<tr>";
+            sout += "<td>" + arr[i].getTen() + "</td>";
+            sout += "<tr>";
+        }
+        sout += "<table>";
+        document.write(sout);
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
 </body>
 </html>

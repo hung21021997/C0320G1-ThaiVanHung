@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function searchMaxMid(arr) {
+        let max = arr[0];
+        let sum = arr[0];
+        let mid;
+        for (let i=1; i<arr.length; i++){
+            sum += arr[i];
+            if(max<arr[i]){
+                max = arr[i];
+            }
+        }
+        mid = sum/(arr.length);
+        alert("Giá trị lớn nhất của mảng: " + max + "\n" + "Giá trị trung bình của mảng: " + mid);
+    }
+    let array = [5,6,4,7,2];
+    searchMaxMid(array);
+</script>
 </body>
 </html>

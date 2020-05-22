@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<canvas id="myCanvas" width="600" height="400" style="border:solid 1px red"></canvas>
+<body>
+<script>
+    let c=document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(200,200,100,0,2*Math.PI);
+    ctx.stroke();
+</script>
+</body>
+</html>

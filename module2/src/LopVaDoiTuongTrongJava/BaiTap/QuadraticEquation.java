@@ -2,27 +2,7 @@ package LopVaDoiTuongTrongJava.BaiTap;
 
 import java.util.Scanner;
 
-public class PhuongTrinhBac2 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter number1: ");
-        double number1 = Integer.parseInt(input.nextLine());
-        System.out.println("Enter number2: ");
-        double number2 = Integer.parseInt(input.nextLine());
-        System.out.println("Enter number3: ");
-        double number3 = Integer.parseInt(input.nextLine());
-        QuadraticEquation equation = new QuadraticEquation(number1,number2,number3);
-        if (equation.delta()>0){
-            System.out.println("Root1 of the equation: " + equation.getRoot1());
-            System.out.println("Root2 of the equation: " + equation.getRoot2());
-        } else if(equation.delta()==0){
-            System.out.println("Root of the equation: " + equation.getRoot1());
-        } else {
-            System.out.println("The equation has no roots");
-        }
-    }
-}
-class QuadraticEquation{
+public class QuadraticEquation {
     private double number1, number2, number3;
     public QuadraticEquation (double number1, double number2, double number3){
         this.number1 = number1;
@@ -63,4 +43,23 @@ class QuadraticEquation{
     public double getRoot2(){
         return (-number2+Math.sqrt(this.delta()))/(2*this.number1);
     }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter number1: ");
+        double number1 = Integer.parseInt(input.nextLine());
+        System.out.println("Enter number2: ");
+        double number2 = Integer.parseInt(input.nextLine());
+        System.out.println("Enter number3: ");
+        double number3 = Integer.parseInt(input.nextLine());
+        QuadraticEquation equation = new QuadraticEquation(number1,number2,number3);
+        if (equation.delta()>0){
+            System.out.println("Root1 of the equation: " + equation.getRoot1());
+            System.out.println("Root2 of the equation: " + equation.getRoot2());
+        } else if(equation.delta()==0){
+            System.out.println("Root of the equation: " + equation.getRoot1());
+        } else {
+            System.out.println("The equation has no roots");
+        }
+    }
 }
+

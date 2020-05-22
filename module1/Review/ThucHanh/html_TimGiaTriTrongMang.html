@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    function searchNumber(arr,number) {
+        let check=0;
+        let index;
+        for(let i=0; i<arr.length; i++){
+            if(arr[i]==number){
+                check ++;
+                index = i;
+            }
+        }
+        if(check>0){
+            alert("Giá trị bạn cần tìm có trong mảng và nằm ở vị trí: " + index);
+        } else {
+            alert("Giá trị bạn cần tìm không có trong mảng");
+        }
+    }
+    let array = [5,65,11,63,85,8,12,9,91,32,74,15];
+    searchNumber(array,45);
+</script>
 </body>
 </html>

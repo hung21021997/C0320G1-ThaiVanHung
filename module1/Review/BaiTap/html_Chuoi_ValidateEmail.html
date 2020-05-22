@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function validateEmail(str) {
+        let result = /^[0-9a-zA-Z]+\@[0-9a-zA-Z]+\.[0-9a-zA-Z]+$/;
+        if(result.test(str)){
+            document.write(str + " Email hợp lệ" + "<br>");
+        } else {
+            document.write(str + " Email không hợp lệ" + "<br>");
+        }
+    }
+    let result1 = "adsa.as";
+    let result2 = "abc@abc.abc";
+    let result3 = "abc.abc@abc";
+    validateEmail(result1);
+    validateEmail(result2);
+    validateEmail(result3);
+</script>
 </body>
 </html>

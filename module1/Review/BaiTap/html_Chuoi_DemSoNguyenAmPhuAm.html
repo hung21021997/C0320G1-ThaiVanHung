@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function checkNumber(str) {
+        let result = /^[ueoaiUEOAI]$/;
+        let check = 0;
+        for(let i=0; i<str.length; i++){
+            if(result.test(str.charAt(i))){
+                check++;
+            }
+        }
+        document.write("sô nguyên âm trong chuỗi " + str + " là: " + check + "<br>");
+    }
+    let result1 = "toilakengoc";
+    let result2 = "codegymdanang";
+    checkNumber(result1);
+    checkNumber(result2);
+</script>
 </body>
 </html>

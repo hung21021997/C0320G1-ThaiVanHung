@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function isPrime() {
+        let number = 2;
+        while (number < 1000){
+            let check =0;
+            for(let i=2; i <= Math.sqrt(number); i++){
+                if(number % i ===0){
+                    check++;
+                    break;
+                }
+            }
+            if(check===0){
+                document.write(number + ": là số nguyên tố" + "<br>");
+            }
+            number++;
+        }
+    }
+    isPrime();
+</script>
 </body>
 </html>

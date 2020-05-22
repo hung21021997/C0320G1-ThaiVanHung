@@ -1,4 +1,5 @@
 package AbstractClassAndInterface.ThucHanh;
 
-public class Edible {
+public interface Edible {
+    String howToEat();
 }

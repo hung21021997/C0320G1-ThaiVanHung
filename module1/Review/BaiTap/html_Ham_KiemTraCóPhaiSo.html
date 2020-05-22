@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function kt() {
+        let num = prompt("input num: ");
+        let count;
+        let result = /^[0-9]{1,}$/;
+        if(result.test(num)){
+            count = true;
+        } else {
+            count = false;
+        }
+        alert(count);
+    }
+    kt();
+</script>
 </body>
 </html>

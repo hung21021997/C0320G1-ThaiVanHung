@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function validateNumber(str) {
+        let result = /^\([0-9]{2}\)\-\(0[0-9]{9}\)$/;
+        if (result.test(str)){
+            document.write(str + " sdt hợp lệ" + "<br>");
+        } else {
+            document.write(str + " sdt không hợp lệ" + "<br>");
+        }
+    }
+    let result1 = "(09)-(1234567890)";
+    let result2 = "(09)-(0123456789)";
+    let result3 = "(a9)-(0123456789)";
+    validateNumber(result1);
+    validateNumber(result2);
+    validateNumber(result3);
+</script>
 </body>
 </html>

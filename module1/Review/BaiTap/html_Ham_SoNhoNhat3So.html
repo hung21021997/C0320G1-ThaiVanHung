@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function minNumber() {
+        let number1 = parseFloat(prompt("Input number1: "));
+        let number2 = parseFloat(prompt("Input number2: "));
+        let number3 = parseFloat(prompt("Input number3: "));
+        if(number1<number2){
+            if(number1<number3){
+                alert("Số bé nhất: " + number1);
+            } else {
+                alert("Số bé nhất: " + number3)
+            }
+        } else {
+            if(number2<number3){
+                alert("Số bé nhất: " + number2);
+            } else {
+                alert("Số bé nhất: " + number3);
+            }
+        }
+    }
+    minNumber();
+</script>
 </body>
 </html>

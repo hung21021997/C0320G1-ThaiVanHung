@@ -1,4 +1,5 @@
 package AbstractClassAndInterface.ThucHanh;
 
-public class Animal {
+public abstract class Animal {
+    public abstract String makeSound();
 }

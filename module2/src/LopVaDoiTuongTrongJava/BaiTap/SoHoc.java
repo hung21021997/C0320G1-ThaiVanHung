@@ -2,19 +2,7 @@ package LopVaDoiTuongTrongJava.BaiTap;
 
 import java.util.Scanner;
 
-public class BaiLamThem01SoHoc {
-    public static void main(String[] args) {
-
-        SoHoc soHoc =new SoHoc();
-        soHoc.inputInfo();
-        soHoc.printInfo();
-        System.out.println("Tổng 2 số: " + soHoc.addition());
-        System.out.println("Hiệu 2 số: " + soHoc.subtract());
-        System.out.println("Tích 2 số: " + soHoc.multi());
-        System.out.println("Thương 2 số: " +soHoc.division());
-    }
-}
-class SoHoc{
+public class SoHoc {
     double number1, number2;
 
     public SoHoc(double number1, double number2) {
@@ -50,15 +38,25 @@ class SoHoc{
         System.out.println("Number1: " + number1 + ", number2: " + number2);
     }
     public double addition(){
-        return number1+number2;
+        return this.number1+this.number2;
     }
     public double subtract(){
-        return number1-number2;
+        return this.number1-this.number2;
     }
     public double multi(){
-        return number1*number2;
+        return this.number1*this.number2;
     }
     public double division(){
-        return number1/number2;
+        return this.number1/this.number2;
+    }
+    public static void main(String[] args) {
+
+        SoHoc soHoc =new SoHoc();
+        soHoc.inputInfo();
+        soHoc.printInfo();
+        System.out.println("Tổng 2 số: " + soHoc.addition());
+        System.out.println("Hiệu 2 số: " + soHoc.subtract());
+        System.out.println("Tích 2 số: " + soHoc.multi());
+        System.out.println("Thương 2 số: " +soHoc.division());
     }
 }

@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let result = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/
+    let date = prompt("input date: ","12/12/1234");
+    if(result.test(date)){
+        let year = parseInt(date.substr(6,4));
+        let month = parseInt(date.substr(3,2));
+        let day = parseInt(date.substr(0,2));
+        if(year>2020){
+            alert("Thời gian (năm) không chính xác");
+        }
+        if(month>12){
+            alert("Thời gian (tháng) không chính xác");
+        }
+        if(day >31){
+            alert("Thời gian (ngày) không chính xác");
+        }
+    } else {
+        alert("Định dạng không chính xác");
+    }
+</script>
 </body>
 </html>

@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Temperature {
+        constructor(C) {
+            this.C = C;
+        }
+        K(){
+            let K = this.C + 273;
+            return K;
+        }
+        F(){
+            let F = this.C*1.8+32;
+            return F;
+        }
+    }
+    let myTemperature = new Temperature(25);
+    if(myTemperature.C < -273){
+        alert("Nhiệt độ quá thấp không thể chuyển đổi");
+    } else {
+        alert(myTemperature.C + "oC" + " = " + myTemperature.F() + "oF" + " = " + myTemperature.K() +"oK");
+    }
+</script>
 </body>
 </html>

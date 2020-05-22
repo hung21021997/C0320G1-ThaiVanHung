@@ -2,9 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    var nums = [];
+    for(let i=0;i<100;++i){
+        nums[i] = Math.floor(Math.random() * 101);
+    }
+    function insertionsort(arr){
+        for (let i=0; i<arr.length; i ++){
+            let key = arr[i]
+            let j = i-1
+            while (j >= 0 && key < arr[j]){
+                arr[j + 1] = arr[j]
+                j -= 1
+                arr[j + 1] = key
+            }
+        }
+    }
+    insertionsort(nums);
+    
+    function count(arr, data) {
+        var count = 0;
+        var position = binarySearch(arr, data);
+        console.log("position: " + position)
+        if (position > -1) {
+            ++count;
+            console.log(count)
+            for (var i = position-1; i > 0; --i) {
+                if (arr[i] == data) {
+                    ++count;
+                }
+                else {
+                    break;
+                }
+            }
+            for (var i = position+1; i < arr.length; ++i) {
+                if (arr[i] == data) {
+                    ++count;
+                }
+                else {
+                    break;
+                }
+            }
+        } //end if
+        console.log("count" + count)
+        return count;
+    }
+    function binarySearch(arr, i) {
+        var mid = Math.floor(arr.length / 2);
+        console.log(arr[mid], i);
+        if (arr[mid] === i) {
+            console.log('match', arr[mid], i);
+            console.log(arr[mid])
+            return arr[mid];
+        } else if (arr[mid] < i && arr.length > 1) {
+            console.log('mid lower', arr[mid], i);
+            binarySearch(arr.splice(mid, Number.MAX_VALUE), i);
+        } else if (arr[mid] > i && arr.length > 1) {
+            console.log('mid higher', arr[mid], i);
+            binarySearch(arr.splice(0, mid), i);
+        } else {
+            console.log('not here', i);
+            return -1;
+        }
+    }
+    function dispArr(arr) {
+        console.log(arr)
+    }
+    dispArr(nums);
+    document.write("<br/>");
+    var val = parseInt(prompt("Enter a value to count: "));
+    var retVal = count(nums, val);
+    document.write("Found " + retVal + " occurrences of " + val + ".");
+</script>
 </body>
 </html>

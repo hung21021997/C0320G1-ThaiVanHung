@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function arrNumb(arr,numb) {
+        let count=0;
+        let check=0;
+        for (let i =0; i<arr.length; i++){
+            if(arr[i] === numb){
+                check++;
+            }
+        }
+        if(check>0){
+            count = check;
+        } else{
+            count = -1;
+        }
+        return count;
+    }
+    let array =["t","o","i","l","a","k","e","n","g","o","c"];
+    alert(arrNumb(array,"o"));
+</script>
 </body>
 </html>

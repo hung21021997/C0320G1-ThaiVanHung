@@ -3,16 +3,7 @@ package LopVaDoiTuongTrongJava.BaiTap;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class BaiLamThem02NhanVien {
-    public static void main(String[] args) {
-        NhanVien nhanVien = new NhanVien();
-        nhanVien.inputInfo();
-        nhanVien.printInfo();
-        System.out.println("Lương thưởng nhân viên: " + nhanVien.tinhThuong());
-    }
-
-}
-class NhanVien{
+public class NhanVien {
     String name;
     int age;
     String address;
@@ -96,4 +87,11 @@ class NhanVien{
             return 0;
         }
     }
+    public static void main(String[] args) {
+        NhanVien nhanVien = new NhanVien();
+        nhanVien.inputInfo();
+        nhanVien.printInfo();
+        System.out.println("Lương thưởng nhân viên: " + nhanVien.tinhThuong());
+    }
+
 }

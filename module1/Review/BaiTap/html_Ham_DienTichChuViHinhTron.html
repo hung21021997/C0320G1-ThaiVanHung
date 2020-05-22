@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function areaPer() {
+        let R = parseFloat(prompt("bán kính hình tròn: "));
+        let area = R*R*Math.PI;
+        let per = (R+R)*Math.PI;
+        alert("Diện tích hình tròn bán kính R: " + area + "\n" + "Chu vi hình tròn bán kính R: " + per);
+    }
+    areaPer();
+</script>
 </body>
 </html>

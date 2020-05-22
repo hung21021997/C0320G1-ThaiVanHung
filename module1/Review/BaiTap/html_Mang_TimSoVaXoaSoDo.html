@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function searchDeleteNumber(arr,number) {
+        let count = 0;
+        let result;
+        let index;
+        for (let i=0; i<arr.length; i++){
+            if(arr[i] === number){
+                count ++;
+                index = i;
+            }
+        }
+        if(count >0){
+            for (let j=index; j<arr.length;j++){
+                arr[j]=arr[j+1];
+            }
+            arr.pop();
+        } else {
+            alert("Number is not in the array")
+        }
+    }
+    let array = [5,11,4,6,12];
+    alert(array);
+    searchDeleteNumber(array,4);
+    alert(array);
+</script>
 </body>
 </html>

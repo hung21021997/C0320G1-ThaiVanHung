@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function searchMax(arr) {
+        let max = arr[0];
+        let index;
+        for(let i=1; i<arr.length; i++){
+            if(max<arr[i]){
+                max=arr[i];
+                index = i;
+            }
+        }
+        document.write("Giá trị lớn nhất của mảng: " + max + " Tại vị trí: " + index);
+    }
+    let array = [];
+    for(let i=0; i<5; i++){
+        array[i] = i*Math.random();
+    }
+    document.write(array + "<br>");
+    searchMax(array);
+</script>
 </body>
 </html>

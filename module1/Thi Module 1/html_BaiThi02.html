@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    arr = ["Apple", "Banana",  ]
+    function removeFruit(arr) {
+        let nameFruit = prompt(" Input nameFruit: ");
+        let check =false;
+        let index;
+        for (let i=0; i<arr.length; i++){
+            if (nameFruit === arr[i]){
+
+                index = i;
+                check = true;
+                break;
+            }
+        }
+        if(check){
+            for (let j = index; j< arr.length; j++){
+                arr[j]=arr[j+1];
+            }
+            arr.pop();
+            alert(arr);
+        } else {
+            alert("Fails");
+        }
+    }
+    let array = ["Apple","Banana","Lemon"];
+    removeFruit(array);
+</script>
 </body>
 </html>

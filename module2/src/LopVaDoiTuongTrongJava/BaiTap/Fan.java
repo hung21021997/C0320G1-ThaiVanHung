@@ -1,21 +1,6 @@
 package LopVaDoiTuongTrongJava.BaiTap;
 
-public class ClassFan {
-    public static void main(String[] args) {
-        final byte slow = 1;
-        final byte medium = 2;
-        final byte fast = 3;
-        Fan fan1 = new Fan();
-        fan1.setColor("yellow");
-        fan1.setOn(true);
-        fan1.setRadius(10);
-        System.out.println(fan1.toString());
-        Fan fan2 = new Fan();
-        fan2.setColor("blue");
-        System.out.println(fan2.toString());
-    }
-}
-class Fan{
+public class Fan {
     int speed;
     boolean on = false;
     double radius = 5;
@@ -67,8 +52,21 @@ class Fan{
         if (this.on == true){
             return "fan is on";
         } else {
-         return "fan is off";
+            return "fan is off";
         }
     }
-
+    public static void main(String[] args) {
+        final byte slow = 1;
+        final byte medium = 2;
+        final byte fast = 3;
+        Fan fan1 = new Fan();
+        fan1.setColor("yellow");
+        fan1.setOn(true);
+        fan1.setRadius(10);
+        System.out.println(fan1.toString());
+        Fan fan2 = new Fan();
+        fan2.setColor("blue");
+        System.out.println(fan2.toString());
+    }
 }
+

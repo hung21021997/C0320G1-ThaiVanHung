@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function func() {
+        let number = prompt("Input number:");
+        let sum=0;
+        for (let i=1; i<number; i++){
+            if(number%i==0){
+                sum +=i;
+            }
+        }
+        if(number == sum){
+            alert("true");
+        } else {
+            alert("false");
+        }
+    }
+    func();
+</script>
 </body>
 </html>

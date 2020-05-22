@@ -2,7 +2,7 @@ package AbstractClassAndInterface.ThucHanh;
 
 import java.util.Comparator;
 
-public class CompeCircle implements Comparator<Circle> {
+public class CompaCircle implements Comparator<Circle> {
 
     @Override
     public int compare(Circle c1, Circle c2) {

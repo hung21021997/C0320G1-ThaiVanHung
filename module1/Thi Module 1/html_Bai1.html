@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let array = [];
+    for (let i =0; i<30; i++){
+        array[i] = i;
+    }
+    alert(array);
+    let sum = 0;
+    let check =0;
+    let tb;
+    for (let i=0;i<array.length;i++){
+        if(array[i]%3==0){
+            sum += array[i];
+            check++;
+        }
+    }
+    tb = sum/check;
+    alert("trung bình các số chia hết cho 3 trong mảng: " + tb);
+</script>
 </body>
 </html>
