@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+<a href="/furama/service/create">Create new service</a>
+<br>
+<a href="/furama">Home furama</a>
+<h1>Customers</h1>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<table border="1">
+    <tr>
+        <th>Name Service</th>
+        <th>Area Service</th>
+        <th>Quantity Services</th>
+        <th>Storey Services</th>
+        <th>Rent Hire Services</th>
+        <th>State Services</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="service : ${services}">
+        <tr>
+            <td th:text="${service.nameServices}"></td>
+            <td th:text="${service.areaServices}"></td>
+            <td th:text="${service.quantityServices}"></td>
+            <td th:text="${service.storeyServices}"></td>
+            <td th:text="${service.rentHireServices}"></td>
+            <td th:text="${service.stateServices}"></td>
+            <td><a th:href="@{/services/edit/__${service.idServices}__ }">Edit</a></td>
+            <td><a th:href="@{/services/delete/__${service.idServices}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

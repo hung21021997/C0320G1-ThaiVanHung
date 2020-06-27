@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit customer</title>
+</head>
+<body>
+<h1>Edit customer</h1>
+<p>
+    <a href="/furama/">Customer list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/furama/create}" th:object="${customer}" method="post">
+<!--    <input th:type="hidden" name="id" th:field="*{idCustomer}">-->
+    <table>
+        <tr>
+            <td>Name Customer:</td>
+            <td><input type="text" th:field="*{nameCustomer}"/></td>
+<!--            <td th:if="${#fields.hasErrors('nameCustomer')}"th:errors="*{nameCustomer}">Name Customer Error</td>-->
+        </tr>
+        <tr>
+            <td>Address Customer:</td>
+            <td><input type="text" th:field="*{addressCustomer}"/></td>
+<!--            <td th:if="${#fields.hasErrors('addressCustomer')}"th:errors="*{addressCustomer}">Address Customer Error</td>-->
+        </tr>
+        <tr>
+            <td>Birth Customer:</td>
+            <td><input type="text" th:field="*{birthCustomer}"/></td>
+        </tr>
+        <tr>
+            <td>CMND Customer:</td>
+            <td><input type="text" th:field="*{cmndCustomer}"/></td>
+        </tr>
+        <tr>
+            <td>Code Customer:</td>
+            <td><input type="text" th:field="*{codeCustomer}"/></td>
+        </tr>
+        <tr>
+            <td>Email Customer:</td>
+            <td><input type="text" th:field="*{emailCustomer}"/></td>
+        </tr>
+        <tr>
+            <td>Phone Customer:</td>
+            <td><input type="text" th:field="*{phoneCustomer}"/></td>
+        </tr>
+        <tr>
+            <td>Service:</td>
+            <td>
+                <select th:field="*{service.idServices}">
+                    <option th:each="s : ${services}"
+                            th:value="${s.idServices}"
+                            th:text="${s.nameServices}">
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update customer"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

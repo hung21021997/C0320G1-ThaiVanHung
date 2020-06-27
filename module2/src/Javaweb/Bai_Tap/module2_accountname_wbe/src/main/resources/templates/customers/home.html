@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #header {
+            background-color: white;
+            color: black;
+            text-align:center;
+            padding:40px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ0opo2zEC8cJInnIitfxO8lgMgLIWZXUOxJA&usqp=CAU") ;
+        }
+        #nav {
+            line-height:25px;
+            background-color:#eeeeee;
+            height:700px;
+            width:200px;
+            float:left;
+            padding: 20px;
+        }
+        #nav1 {
+            line-height:25px;
+            background-color:#eeeeee;
+            height:700px;
+            width:200px;
+            float:right;
+            padding:20px;
+        }
+
+        #section {
+            width:920px;
+            float:left;
+            padding:50px;
+        }
+        #footer {
+             background-color:lightskyblue;
+             color:red;
+             clear:both;
+             text-align:center;
+             padding:10px;
+         }
+        body {
+            background-image: url("https://lh3.googleusercontent.com/proxy/5UQy92k9v4L-4hANPlgBsbqy0D-Q3dRYYPC4gbnDTEuBjz1up4Wg18i_saxLwqDSG1NyNMsjYq6nr57g0JjdxibD8o6kI5CLEAb8trr_Np3DEI-KSTTPHsK3TlAcPR2CZ31D");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div>
+        <div id="header">
+            <h1 style="color: orangered">FURAMA RESORT</h1>
+            <img style="position: absolute;left: 20px;top: 28px" src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png"
+                 height="75" width="75">
+        </div>
+        <div style="position: absolute;right: 15px;top: 50px;" >
+            <a href="/user/signIn" class="btn btn-warning">ĐĂNG KÝ  </a>
+            <a href="/home/logIn" class="btn btn-warning">ĐĂNG NHẬP</a>
+        </div>
+    </div>
+</header>
+<div style="background: darkseagreen;font-size: 25px; text-align: center">
+    Home &emsp;&emsp; Dịch vụ &emsp;&emsp; Tìm kiếm &emsp;&emsp; Review
+</div>
+<div id="nav1">
+    <p> Feature 1 </p>
+    <p> Feature 2 </p>
+    <p> Feature 3 </p>
+    <p> Feature 4 </p>
+    <p> Feature 5 </p>
+    <p> Feature 6 </p>
+</div>
+<div id="nav">
+    <p><a href="create-customer">Add new customer</a></p>
+    <p> Section 1</p>
+    <p> Section 2 </p>
+    <p> Section 3 </p>
+    <p> Section 4 </p>
+    <p> Section 5 </p>
+    <p> Section 6 </p>
+    <p> Section 7 </p>
+    <p> Section 8 </p>
+    <p> Section 9 </p>
+    <p> Section 10 </p>
+    <p> Section 11 </p>
+    <p> Section 12 </p>
+    <p> Section 13 </p>
+    <p> Section 14 </p>
+    <p> Section 15 </p>
+</div>
+<div id="section">
+    <h3>FURAMA RESORT ĐÀ NẴNG</h3>
+    <p>
+        <strong>Furama Resort Đà Nẵng</strong> tọa lac bãi biển Bắc Mỹ An, Đà Nẵng, nơi được khách du lịch biết đến như là một nơi nghỉ dưỡng biển ngang tầm quốc tế.
+    </p>
+    <p>
+        Giữa lòng thành phố Đà Nẵng, khu nghỉ dưỡng <strong>Furama Resort & Villas Đà Nẵng</strong>  hiện lên tựa một ‘’ốc đảo xanh’’ làm mê đắm lòng người. Và rồi khi dừng chân tại nơi đây,
+        bạn tựa như lạc vào một không gian mang đậm đà nét văn hóa Việt pha lẫn với sự hiện đại cùng với sự du lịch thời thượng xứng tầm đẳng cấp 5 sao quốc tế.
+        Khu nghĩ dưỡng cũng có những tiện nghi đạt chuẩn 5 sao:
+    </p>
+    <ul>
+        <li>Dịch vụ trông trẻ</li>
+        <li>Junior & Senior Kid’s Club</li>
+        <li>Dịch vụ xe Limousine</li>
+        <li>Dịch vụ trợ giúp đặc biệt</li>
+        <li>...</li>
+    </ul>
+</div>
+<div id="footer">
+    Bản quyền © Hùng Antimatter
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>
