@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Delete service</title>
 </head>
 <body>
-$END$
+<h1>Delete service</h1>
+<h2>Are you sure?</h2>
+<p>
+    <a href="/furama/">Home furama</a>
+    <br>
+    <a href="/furama/service">Show all service</a>
+</p>
+<form th:action="@{/furama/service/delete}" th:object="${service}" method="post">
+    <input th:type="hidden" name="id" th:field="*{idServices}">
+    <input th:type="hidden" name="id" th:field="*{nameServices}">
+    <input th:type="hidden" name="id" th:field="*{areaServices}">
+    <input th:type="hidden" name="id" th:field="*{quantityServices}">
+    <input th:type="hidden" name="id" th:field="*{storeyServices}">
+    <input th:type="hidden" name="id" th:field="*{rentHireServices}">
+    <input th:type="hidden" name="id" th:field="*{stateServices}">
+
+    <table>
+        <tr>
+            <td>Name Service:</td>
+            <td th:text="${service.nameServices}"></td>
+        </tr>
+        <tr>
+            <td>Area Service:</td>
+            <td th:text="${service.areaServices}"></td>
+        </tr>
+        <tr>
+            <td>Quantity Service:</td>
+            <td th:text="${service.quantityServices}"></td>
+        </tr>
+        <tr>
+            <td>Storey Service:</td>
+            <td th:text="${service.storeyServices}"></td>
+        </tr>
+        <tr>
+            <td>Rent Hire Service:</td>
+            <td th:text="${service.rentHireServices}"></td>
+        </tr>
+        <tr>
+            <td>State Service:</td>
+            <td th:text="${service.stateServices}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Delete service"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

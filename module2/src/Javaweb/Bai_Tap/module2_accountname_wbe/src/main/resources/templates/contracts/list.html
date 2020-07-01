@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Contract</title>
 </head>
 <body>
-$END$
+<a href="/furama/contract/create">Create new contract</a>
+<br>
+<a href="/furama">Home furama</a>
+<h1>Contract</h1>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<table border="1">
+    <tr>
+        <th>Date Start Contract</th>
+        <th>Date End Contract</th>
+        <th>Deposit Contract:</th>
+        <th>Total Contract</th>
+        <th>Id Customer</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="contract : ${contracts}">
+        <tr>
+            <td th:text="${contract.dateStartContract}"></td>
+            <td th:text="${contract.dateEndContract}"></td>
+            <td th:text="${contract.depositContract}"></td>
+            <td th:text="${contract.totalContract}"></td>
+            <td th:text="${contract.customer.idCustomer}"></td>
+            <td><a th:href="@{/furama/contract/edit/__${contract.idContract}__ }">Edit</a></td>
+            <td><a th:href="@{/furama/contract/delete/__${contract.idContract}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
 </body>
 </html>

@@ -8,9 +8,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Product List</title>
 </head>
 <body>
-$END$
+<h1>Product</h1>
+<p>
+    <a href="/products?action=create">Create new customer</a>
+</p>
+<table border="l">
+    <tr>
+        <td>NameProduct</td>
+        <td>RateProduct</td>
+        <td>MakerProduct</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <c:forEach items = '${requestScope["products"]}' var = "cutomer">
+        <tr>
+            <td><a href="/products?action=view&id=${product.getIdProduct()}">${product.getNameProduct()}</a> </td>
+            <td>${product.getRateProduct}</td>
+            <td>${product.getMakerProduct}</td>
+            <td><a href="/products?action=edit&id=${product.getIdProduct()}">edit</a></td>
+            <td><a href="/products?action=delete&id=${product.getIdProduct()}">delete</a></td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

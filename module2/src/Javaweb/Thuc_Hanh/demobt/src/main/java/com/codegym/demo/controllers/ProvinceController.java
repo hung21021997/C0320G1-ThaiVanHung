@@ -1,4 +1,7 @@
 package com.codegym.demo.controllers;
 
-public class ProvinController {
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ProvinceController {
 }

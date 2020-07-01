@@ -8,9 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Convert Controller</title>
 </head>
 <body>
-$END$
+<h1>Converter</h1>
+<form action="/converter/result" method="get">
+    <label>Rate: </label>
+    <input type="text" name="rate" value="22000"><br>
+    <label>USD: </label>
+    <input type="text" name="usd" value="1"><br>
+    <input type="submit" id="submit">
+</form>
 </body>
 </html>

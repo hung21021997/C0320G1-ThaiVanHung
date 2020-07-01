@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>Calculator</h1>
-<form action="/calculate" method="get" >
+<form action="calculate" method="get" >
     <input type="text" name="number1">
     <input type="text" name="number2"><br><br>
     <input class="btn btn-primary" type="submit" value="Addition(+)">

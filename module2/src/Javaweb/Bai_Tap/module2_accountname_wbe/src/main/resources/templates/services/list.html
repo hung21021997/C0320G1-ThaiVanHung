@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Customers</title>
+    <style>
+        /*Cố định chuyển trang*/
+        .fixed {
+            position: fixed;
+            bottom: 200px;
+            left: 50px;
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
 <a href="/furama/service/create">Create new service</a>
 <br>
 <a href="/furama">Home furama</a>
-<h1>Customers</h1>
+<h1>Service</h1>
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
+<form>
+    <!--    Tìm Kiếm-->
+    Search by name service:
+    <input name="nameServices" type="text" th:value="${nameServices}"/>
+    <br>
+    <br>
+    Search by quantity service:
+    <input name="quantityServices" type="text" th:value="${quantityServices}">
+    <br>
+    <br>
+    <input type="submit" value="Search">
+</form><br/>
 <table border="1">
     <tr>
         <th>Name Service</th>
@@ -31,10 +52,16 @@
             <td th:text="${service.storeyServices}"></td>
             <td th:text="${service.rentHireServices}"></td>
             <td th:text="${service.stateServices}"></td>
-            <td><a th:href="@{/services/edit/__${service.idServices}__ }">Edit</a></td>
-            <td><a th:href="@{/services/delete/__${service.idServices}__ }">Delete</a></td>
+            <td><a th:href="@{/furama/service/edit/__${service.idServices}__ }">Edit</a></td>
+            <td><a th:href="@{/furama/service/delete/__${service.idServices}__ }">Delete</a></td>
         </tr>
     </th:block>
 </table>
+<div class="fixed">
+
+    <a th:href="@{'/furama/service'(page=${services.number}, nameServices = ${nameServices}, quantityServices=${quantityServices})}" th:if="${services.hasPrevious()}">Previous</a>
+    <span th:text="${services.number + 1}"></span>/<span th:text="${services.totalPages}"></span>
+    <a th:href="@{'/furama/service'(page=${services.number + 2}, nameServices=${nameServices}, quantityServices=${quantityServices})}" th:if="${services.hasNext()}">Next</a>
+</div>
 </body>
 </html>

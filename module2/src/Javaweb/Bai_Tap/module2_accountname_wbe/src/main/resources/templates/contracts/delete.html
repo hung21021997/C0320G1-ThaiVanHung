@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Delete customer</title>
 </head>
 <body>
-$END$
+<h1>Delete Contract</h1>
+<h2>Are you sure?</h2>
+<p>
+    <a href="/furama/">Home furama</a>
+    <br>
+    <a href="/furama/contract">Show all contract</a>
+</p>
+<form th:action="@{/furama/contract/delete}" th:object="${contract}" method="post">
+    <input th:type="hidden" name="id" th:field="*{idContract}">
+    <input th:type="hidden" name="id" th:field="*{dateStartContract}">
+    <input th:type="hidden" name="id" th:field="*{dateEndContract}">
+    <input th:type="hidden" name="id" th:field="*{depositContract}">
+    <input th:type="hidden" name="id" th:field="*{totalContract}">
+    <input th:type="hidden" name="id" th:field="*{customer.idCustomer}">
+
+    <table>
+        <tr>
+            <td>Date Start Contract:</td>
+            <td th:text="${contract.dateStartContract}"></td>
+        </tr>
+        <tr>
+            <td>Date End Contract:</td>
+            <td th:text="${contract.dateEndContract}"></td>
+        </tr>
+        <tr>
+            <td>Deposit Contract:</td>
+            <td th:text="${contract.depositContract}"></td>
+        </tr>
+        <tr>
+            <td>Total Contract:</td>
+            <td th:text="${contract.totalContract}"></td>
+        </tr>
+        <tr>
+            <td>Id Customer:</td>
+            <td th:text="${contract.customer.idCustomer}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Delete contract"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

@@ -1,4 +1,7 @@
 package codegym.com.module2_accountname_wbe.controllers;
 
-public class ServiceCustomer {
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ServiceController {
 }

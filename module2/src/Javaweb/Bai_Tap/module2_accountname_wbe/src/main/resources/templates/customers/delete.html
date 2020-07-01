@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Delete customer</title>
 </head>
 <body>
-$END$
+<h1>Delete Customer</h1>
+<h2>Are you sure?</h2>
+<p>
+    <a href="/furama/">Home furama</a>
+    <br>
+    <a href="/furama/customer">Show all customer</a>
+</p>
+<form th:action="@{/furama/customer/delete}" th:object="${customer}" method="post">
+    <input th:type="hidden" name="id" th:field="*{idCustomer}">
+    <input th:type="hidden" name="id" th:field="*{codeCustomer}">
+    <input th:type="hidden" name="id" th:field="*{nameCustomer}">
+    <input th:type="hidden" name="id" th:field="*{addressCustomer}">
+    <input th:type="hidden" name="id" th:field="*{emailCustomer}">
+    <input th:type="hidden" name="id" th:field="*{phoneCustomer}">
+    <input th:type="hidden" name="id" th:field="*{cmndCustomer}">
+    <input th:type="hidden" name="id" th:field="*{birthCustomer}">
+    <input th:type="hidden" name="id" th:field="*{service.idServices}">
+
+    <table>
+        <tr>
+            <td>Name Customer:</td>
+            <td th:text="${customer.nameCustomer}"></td>
+        </tr>
+        <tr>
+            <td>Code Customer:</td>
+            <td th:text="${customer.codeCustomer}"></td>
+        </tr>
+        <tr>
+            <td>Address Customer:</td>
+            <td th:text="${customer.addressCustomer}"></td>
+        </tr>
+        <tr>
+            <td>Email Customer:</td>
+            <td th:text="${customer.emailCustomer}"></td>
+        </tr>
+        <tr>
+            <td>Phone Customer:</td>
+            <td th:text="${customer.phoneCustomer}"></td>
+        </tr>
+        <tr>
+            <td>Cmnd Customer:</td>
+            <td th:text="${customer.cmndCustomer}"></td>
+        </tr>
+        <tr>
+            <td>Birth Customer:</td>
+            <td th:text="${customer.birthCustomer}"></td>
+        </tr>
+        <tr>
+            <td>Name Service:</td>
+            <td th:text="${customer.service.nameServices }"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Delete customer"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

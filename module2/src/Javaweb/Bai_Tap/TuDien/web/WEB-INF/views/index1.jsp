@@ -8,9 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Dictionary</title>
 </head>
 <body>
-$END$
+<h1>Vietnamese Dictionary</h1>
+<form action="/dictionary/search" method="get">
+    <input type="text" name="english">
+    <input type="submit" name="vietnam" value="Search">
+</form>
 </body>
 </html>

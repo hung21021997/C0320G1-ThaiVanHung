@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Customers</title>
+    <style>
+        /*Cố định chuyển trang*/
+        .fixed {
+            position: fixed;
+            bottom: 200px;
+            left: 50px;
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<a href="/furama/customer/create">Create new customer</a>
+<br>
+<a href="/furama">Home furama</a>
+<h1>Customers</h1>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form>
+<!--    Tìm Kiếm-->
+    Search by name customer:
+    <input name="nameCustomer" type="text" th:value="${nameCustomer}"/>
+    <br>
+    <br>
+    Search by phone number:
+    <input type="text" name="phoneCustomer" th:value="${phoneCustomer}">
+    <br>
+    <br>
+    <input type="submit" value="Search">
+</form><br/>
+<table border="1">
+    <tr>
+        <th>Name Customer</th>
+        <th>Code Customer</th>
+        <th>Address Customer</th>
+        <th>Email Customer</th>
+        <th>Phone Customer</th>
+        <th>CMND Customer</th>
+        <th>Birth Customer</th>
+        <th>Name Service</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="customer : ${customers}">
+        <tr>
+            <td th:text="${customer.nameCustomer}"></td>
+            <td th:text="${customer.codeCustomer}"></td>
+            <td th:text="${customer.addressCustomer}"></td>
+            <td th:text="${customer.emailCustomer}"></td>
+            <td th:text="${customer.phoneCustomer}"></td>
+            <td th:text="${customer.cmndCustomer}"></td>
+            <td th:text="${customer.birthCustomer}"></td>
+            <td th:text="${customer.service.nameServices}"></td>
+            <td><a th:href="@{/furama/customer/edit/__${customer.idCustomer}__ }">Edit</a></td>
+            <td><a th:href="@{/furama/customer/delete/__${customer.idCustomer}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+<div class="fixed">
+<!--    Phân trang-->
+    <a th:href="@{'/furama/customer'(page=${customers.number}, nameCustomer=${nameCustomer}, phoneCustomer=${phoneCustomer})}" th:if="${customers.hasPrevious()}">Previous</a>
+    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/furama/customer'(page=${customers.number + 2}, nameCustomer=${nameCustomer}, phoneCustomer=${phoneCustomer})}" th:if="${customers.hasNext()}">Next</a>
+</div>
 </body>
 </html>

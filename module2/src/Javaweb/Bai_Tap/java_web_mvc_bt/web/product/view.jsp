@@ -8,9 +8,26 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>View Product</title>
 </head>
 <body>
-$END$
+<h1>View Product</h1>
+<p>
+    <a href="/products">Back to product list</a>
+</p>
+<table>
+    <tr>
+        <td>NameProduct: </td>
+        <td>${requestScope["product"].getNameProduct()}</td>
+    </tr>
+    <tr>
+        <td>RateProduct: </td>
+        <td>${requestScope["product"].getRateProduct()}</td>
+    </tr>
+    <tr>
+        <td>MarkerProduct: </td>
+        <td>${requestScope["product"].getMarkerProduct()}</td>
+    </tr>
+</table>
 </body>
 </html>

@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Create detail_contract</title>
 </head>
 <body>
-$END$
+<h1>Create new detail_contract</h1>
+<p>
+    <a href="/furama/">Home furama</a>
+    <br>
+    <a href="/furama/detail_contract">Show all detail_contract</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/furama/detail_contract/create}" th:object="${detailContract}" method="post">
+    <!--    <input th:type="hidden" name="id" th:field="*{idCustomer}">-->
+    <table>
+        <tr>
+            <td>Amount Contract:</td>
+            <td><input type="text" th:field="*{amountContract}"/></td>
+            <td th:if="${#fields.hasErrors('amountContract')}"th:errors="*{amountContract}">Amount Contract Error</td>
+        </tr>
+        <tr>
+            <td>Attach Service:</td>
+            <td>
+                <select th:field="*{attachService}">
+                    <option value="Massage">Massage</option>
+                    <option value="Karaoke">Karaoke</option>
+                    <option value="Food">Food</option>
+                    <option value="Water">Water</option>
+                    <option value="Car_Hire">Car_Hire</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Id Contract:</td>
+            <td>
+                <select th:field="*{contract.idContract}">
+                    <option th:each="contract : ${contracts}"
+                            th:value="${contract.idContract}"
+                            th:text="${contract.idContract}">
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create detail_contract"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

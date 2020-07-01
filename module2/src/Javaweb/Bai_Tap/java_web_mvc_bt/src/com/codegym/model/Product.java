@@ -1,15 +1,15 @@
 package com.codegym.model;
 
-public class Products {
+public class Product {
     private int idProduct;
     private String nameProduct;
     private String rateProduct;
     private String makerProduct;
 
-    public Products() {
+    public Product() {
     }
 
-    public Products(int idProduct, String nameProduct, String rateProduct, String makerProduct) {
+    public Product(int idProduct, String nameProduct, String rateProduct, String makerProduct) {
         this.idProduct = idProduct;
         this.nameProduct = nameProduct;
         this.rateProduct = rateProduct;

@@ -8,8 +8,8 @@ public class House extends Services {
     public House() {
     }
 
-    public House(String nameServices, double useArea, double rentServices, int quantity, int styleServices, String standardRoomHouse, String comfortsHouse, int numberStoriesHouse) {
-        super(nameServices, useArea, rentServices, quantity, styleServices);
+    public House(String id, String nameServices, String passServices, double useArea, double rentServices, int quantity, String styleServices, String nameAddServices, String standardRoomHouse, String comfortsHouse, int numberStoriesHouse) {
+        super(id, nameServices, passServices, useArea, rentServices, quantity, styleServices, nameAddServices);
         this.standardRoomHouse = standardRoomHouse;
         this.comfortsHouse = comfortsHouse;
         this.numberStoriesHouse = numberStoriesHouse;

@@ -2,48 +2,55 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Edit customer</title>
+    <title>Create customer</title>
 </head>
 <body>
-<h1>Edit customer</h1>
+<h1>Create new customer</h1>
 <p>
-    <a href="/furama/">Customer list</a>
+    <a href="/furama/">Home furama</a>
+    <br>
+    <a href="/furama/customer">Show all customer</a>
 </p>
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
-<form th:action="@{/furama/create}" th:object="${customer}" method="post">
+<form th:action="@{/furama/customer/create}" th:object="${customer}" method="post">
 <!--    <input th:type="hidden" name="id" th:field="*{idCustomer}">-->
     <table>
         <tr>
             <td>Name Customer:</td>
             <td><input type="text" th:field="*{nameCustomer}"/></td>
-<!--            <td th:if="${#fields.hasErrors('nameCustomer')}"th:errors="*{nameCustomer}">Name Customer Error</td>-->
+            <td th:if="${#fields.hasErrors('nameCustomer')}"th:errors="*{nameCustomer}">Name Customer Error</td>
         </tr>
         <tr>
             <td>Address Customer:</td>
             <td><input type="text" th:field="*{addressCustomer}"/></td>
-<!--            <td th:if="${#fields.hasErrors('addressCustomer')}"th:errors="*{addressCustomer}">Address Customer Error</td>-->
+            <td th:if="${#fields.hasErrors('addressCustomer')}"th:errors="*{addressCustomer}">Address Customer Error</td>
         </tr>
         <tr>
             <td>Birth Customer:</td>
             <td><input type="text" th:field="*{birthCustomer}"/></td>
+            <td th:if="${#fields.hasErrors('birthCustomer')}"th:errors="*{birthCustomer}">Birth Customer Error</td>
         </tr>
         <tr>
             <td>CMND Customer:</td>
             <td><input type="text" th:field="*{cmndCustomer}"/></td>
+            <td th:if="${#fields.hasErrors('cmndCustomer')}"th:errors="*{cmndCustomer}">Cmnd Customer Error</td>
         </tr>
         <tr>
             <td>Code Customer:</td>
             <td><input type="text" th:field="*{codeCustomer}"/></td>
+            <td th:if="${#fields.hasErrors('codeCustomer')}"th:errors="*{codeCustomer}">Code Customer Error</td>
         </tr>
         <tr>
             <td>Email Customer:</td>
             <td><input type="text" th:field="*{emailCustomer}"/></td>
+            <td th:if="${#fields.hasErrors('emailCustomer')}"th:errors="*{emailCustomer}">Email Customer Error</td>
         </tr>
         <tr>
             <td>Phone Customer:</td>
             <td><input type="text" th:field="*{phoneCustomer}"/></td>
+            <td th:if="${#fields.hasErrors('phoneCustomer')}"th:errors="*{phoneCustomer}">Phone Customer Error</td>
         </tr>
         <tr>
             <td>Service:</td>
@@ -58,7 +65,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Update customer"></td>
+            <td><input type="submit" value="Create customer"></td>
         </tr>
     </table>
 </form>

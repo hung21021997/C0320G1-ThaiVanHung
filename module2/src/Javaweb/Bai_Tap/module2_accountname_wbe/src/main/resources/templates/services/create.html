@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Create service</title>
 </head>
 <body>
-$END$
+<h1>Create new service</h1>
+<p>
+    <a href="/furama/">Home furama</a>
+    <br>
+    <a href="/furama/service">Show all service</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/furama/service/create}" th:object="${service}" method="post">
+    <!--    <input th:type="hidden" name="id" th:field="*{idCustomer}">-->
+    <table>
+        <tr>
+            <td>Name Service:</td>
+            <td><input type="text" th:field="*{nameServices}"/></td>
+            <td th:if="${#fields.hasErrors('nameServices')}"th:errors="*{nameServices}">Name Service Error</td>
+        </tr>
+        <tr>
+            <td>Area Service:</td>
+            <td><input type="text" th:field="*{areaServices}"/></td>
+            <!--            <td th:if="${#fields.hasErrors('addressCustomer')}"th:errors="*{addressCustomer}">Address Customer Error</td>-->
+        </tr>
+        <tr>
+            <td>Quantity Services:</td>
+            <td><input type="text" th:field="*{quantityServices}"/></td>
+            <td th:if="${#fields.hasErrors('quantityServices')}"th:errors="*{quantityServices}">Quantity Service Error</td>
+        </tr>
+        <tr>
+            <td>Storey Services:</td>
+            <td><input type="text" th:field="*{storeyServices}"/></td>
+            <td th:if="${#fields.hasErrors('storeyServices')}"th:errors="*{storeyServices}">Storey Service Error</td>
+        </tr>
+        <tr>
+            <td>Rent Hire Services:</td>
+            <td><input type="text" th:field="*{rentHireServices}"/></td>
+        </tr>
+        <tr>
+            <td>State Services:</td>
+            <td><input type="text" th:field="*{stateServices}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create service"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
